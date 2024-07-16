@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id= "WebApp_ID" version="4.0">
+
+<servlet>
+<servlet-name>Kochi</servlet-name>
+<servlet-class>com.luminar.LuminarCochin</servlet-class>
+<init-param>
+<param-name>Address</param-name>
+<param-value>3rd Floor, Vallamattam Estate,
+Seaport - Airport Rd, CSEZ,
+Kakkanad, Cochin, Kerala - 682037
+</param-value>
+</init-param>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>Kochi</servlet-name>
+<url-pattern>/cochin</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>Kozhikode</servlet-name>
+<servlet-class>com.luminar.LuminarCalicut</servlet-class>
+<init-param>
+<param-name>Address</param-name>
+<param-value>2nd Floor, 61/10222,
+
+Mullath Building,
+Opp. KSRTC Bus Stand,
+Mavoor Road, Calicut, Kerala - 673001
+
+</param-value>
+</init-param>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>Kozhikode</servlet-name>
+<url-pattern>/calicut</url-pattern>
+</servlet-mapping>
+
+<context-param>
+<param-name>Website-name</param-name>
+<param-value>https://www.luminartechnolab.com/</param-value>
+</context-param>
+
+</web-app>
