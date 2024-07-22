@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home - MM ATTENDANCE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #clock {
+            font-size: 16px;
+            margin-left: 60px;
+            margin-top:5px;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 200px;
+        }
+        nav button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            
+        }
+        nav button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const formattedTime = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = formattedTime;
+        }
+        setInterval(updateClock, 1000);
+        window.onload = updateClock; // Initialize clock on page load
+    </script>
+</head>
+<body>
+    <header>
+        <div>MM ATTENDANCE AND OD MANAGMENT SYSTEM</div>
+        <div id="clock"></div>
+    </header>
+    
+    <nav>
+        <button onclick="href='InsertEmployee.html'">View Attendance</button>
+        <button onclick="location.href='InsertEmployee.html'">Add Employee</button>
+        <button onclick="location.href='EmployeeVED'">Manage Employee</button>
+        <button onclick="location.href='viewOdRequest.html'">View OD Request</button>
+        <button onclick="location.href='LogoutServlet'">Logout</button>
+    </nav>
+</body>
+</html>
